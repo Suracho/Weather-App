@@ -1,11 +1,10 @@
-const request = require('request')
 const geocode = require('./utils/geocode.js')
-const url = 'https://api.darksky.net/forecast/4000d4d40e964c055d8ad654e546d189/37.8267,-122.4233?units=si'
-
-// request({url: url, json: true }, (error,response)=>{
-//     console.log(response.body.daily.data[0].summary + " The temperature today is " + response.body.currently.temperature + " degree centigrade and there is " + response.body.currently.precipProbability + "% probability of rain today!")
-// })
+const forecast = require('./utils/forecast.js')
 geocode('Philadelphia',(error , data)=>{
+    console.log(error)
+    console.log(data)
+})
+forecast('37.8267','-122.4233',(error,data)=>{
     console.log(error)
     console.log(data)
 })
