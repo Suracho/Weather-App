@@ -1,7 +1,11 @@
 const geocode = require('./utils/geocode.js')
 const forecast = require('./utils/forecast.js')
-geocode(process.argv.slice(2)[0],(error , data)=>{
-    if(error){
+const address = process.argv.slice(2)[0]
+geocode(address ,(error , data)=>{
+    if(!address){
+        return console.log('please provide and address')
+    }
+    else if(error){
       return console.log(error)  
     }
     console.log(data.place_name)
