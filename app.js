@@ -1,5 +1,5 @@
-const geocode = require('./utils/geocode.js')
-const forecast = require('./utils/forecast.js')
+const geocode = require('./web-server/utils/geocode.js.js')
+const forecast = require('./web-server/utils/forecast.js.js')
 const address = process.argv.slice(2)[0]
 geocode(address ,(error , {longitude,latitude,place_name})=>{
     if(!address){
