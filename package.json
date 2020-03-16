@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start":"node web-server/src/app.js"
+    "start": "node web-server/src/app.js",
+    "dev":"nodemon web-server/src/app.js -e js,hbs"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,8 @@
     "path": "^0.12.7",
     "request": "^2.88.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
   "description": ""
 }
