@@ -52,7 +52,7 @@ app.get('/weather', (req, res) => {
                     }
                     else {
                         return res.send({
-                             forecasts : summary + ' Its '+ temperature + ' degrees outside and there is '+ precipProbability + '% probability of rain today'+'Todays temperature high is '+temperature_high+'with low '+temperature_low,
+                             forecasts : summary + ' Its '+ temperature + ' degrees outside and there is '+ precipProbability + '% probability of rain today.'+' Todays temperature high is '+temperature_high+'with low '+temperature_low,
                              place_name         
                         })
                     }
