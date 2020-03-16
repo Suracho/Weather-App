@@ -46,15 +46,14 @@ app.get('/weather', (req, res) => {
         if(error){
             return res.send({error})
         }
-        forecast(latitude,longitude,(error,{summary,temperature,precipProbability})=>{
+        forecast(latitude,longitude,(error,{summary,temperature,precipProbability,temperature_high , temperature_low})=>{
             if(error){
                         return res.send({error})
                     }
                     else {
                         return res.send({
-                             forecasts : summary + ' Its '+ temperature + ' degrees outside and there is '+ precipProbability + '% probability of rain today',
-                             place_name,
-                            address: req.query.address         
+                             forecasts : summary + ' Its '+ temperature + ' degrees outside and there is '+ precipProbability + '% probability of rain today'+'Todays temperature high is '+temperature_high+'with low '+temperature_low,
+                             place_name         
                         })
                     }
                 })

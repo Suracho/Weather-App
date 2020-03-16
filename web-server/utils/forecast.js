@@ -12,8 +12,9 @@ request({url, json: true }, (error,{body})=>{
         callback(undefined,{
             summary:body.daily.data[0].summary,
             temperature:body.currently.temperature,
-            precipProbability:body.currently.precipProbability
-
+            precipProbability:body.currently.precipProbability,
+            temperature_high : body.daily.data[0].temperatureHigh,
+            temperature_low :body.daily.data[0].temperatureLow
         })
     
     }
