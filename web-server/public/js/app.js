@@ -10,7 +10,7 @@ form.addEventListener('submit',(e)=>{
     const location = input.value
     message1.textContent = 'loading'
     message2.textContent =''
-    fetch('http://localhost:3000/weather?address='+encodeURIComponent(location)).then((response)=>{
+    fetch('/weather?address='+encodeURIComponent(location)).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
          message1.textContent = data.error
